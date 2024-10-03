@@ -1,11 +1,19 @@
 import "./App.css"
 import { Counter } from "./features/counter/Counter"
 import { Quotes } from "./features/quotes/Quotes"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import logo from "./logo.svg"
 
 const App = () => {
+  const notify = () => toast("Wow so easy !")
+
   return (
     <div className="App">
+      <div>
+        <button onClick={notify}>Notify !</button>
+        <ToastContainer />
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
